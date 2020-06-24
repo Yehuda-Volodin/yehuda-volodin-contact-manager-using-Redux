@@ -11,6 +11,7 @@ function App(props) {
         contacts={props.contacts}
         dispatchAddContact={props.addContact}
         dispatchDeleteContact={props.deleteContact}
+        dispatchUpdateContacts={props.updateContacts}        
       />
     </div>
   );
@@ -34,9 +35,16 @@ function deleteContact(id) {
     id: id
   }
 }
+function updateContacts(newContacts) {
+  return {
+    type: 'UPDATE_CONTACTS',
+    newContacts: newContacts
+  }
+}
 const mapDispatchToProps = {
   addContact,
-  deleteContact
+  deleteContact,
+  updateContacts
 }
 
 // export default App;

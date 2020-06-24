@@ -63,7 +63,7 @@ export default function ContactManager(props) {
             <ContactList
                 contactsData={props.contacts}
                 handleDelete={props.dispatchDeleteContact}
-                handleSave={setContacts}
+                handleSave={props.dispatchUpdateContacts}
             />
         </Container>
     );

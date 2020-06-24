@@ -31,7 +31,7 @@ export default function ContactList(props) {
     }
     function saveBadgeOnClickHandler(e) {
         e.stopPropagation();
-        let newContacts = props.contactsData;
+        let newContacts = [...props.contactsData];
         newContacts[isEditedId] = document.getElementById("editName-" + isEditedId).value;
         props.handleSave([...newContacts]);        
         setIsEditedId(null);
