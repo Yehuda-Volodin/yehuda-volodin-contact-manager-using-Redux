@@ -31,16 +31,6 @@ export default function ContactManager(props) {
         reader.readAsDataURL(newBackgroundFile);
     }
 
-    function addContact(name) {
-        setContacts([...contacts, name]);
-    }
-
-    function deleteContact(id) {
-        let newContacts = [...contacts];        
-        newContacts.splice(id, 1);
-        setContacts([...newContacts])
-    }
-
     return (
         <Container
             className="contactManager fontSize"
@@ -61,13 +51,20 @@ export default function ContactManager(props) {
                     "position": "fixed",
                     "right": "2%",
                     "color": "#ffc107",
-                    "border": "thin solid #ffc107"                   
+                    "border": "thin solid #ffc107"
                 }}
                 onInput={selectBackgroundFileInputHandler}
             />
-            <MainHeader headerText="Contact Manager" headerStyle={{ "fontFamily": "fantasy" }} />
+            <MainHeader
+                headerText="Contact Manager"
+                headerStyle={{ "fontFamily": "fantasy" }}
+            />
             <AddContact handleSubmit={props.dispatchAddContact} />
-            <ContactList contactsData={props.contacts} handleDelete={props.dispatchDeleteContact} handleEdit={setContacts}/>
+            <ContactList
+                contactsData={props.contacts}
+                handleDelete={props.dispatchDeleteContact}
+                handleSave={setContacts}
+            />
         </Container>
     );
 }

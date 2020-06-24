@@ -6,6 +6,8 @@ import './ContactManager.css';
 export default function ContactList(props) {
     ContactList.propTypes = {
         contactsData: PropTypes.arrayOf(PropTypes.string).isRequired,
+        handleSave: PropTypes.func.isRequired,
+        handleDelete: PropTypes.func.isRequired,
     }
 
     const [itemId, setItemId] = useState(null);
@@ -31,7 +33,7 @@ export default function ContactList(props) {
         e.stopPropagation();
         let newContacts = props.contactsData;
         newContacts[isEditedId] = document.getElementById("editName-" + isEditedId).value;
-        props.handleEdit([...newContacts]);        
+        props.handleSave([...newContacts]);        
         setIsEditedId(null);
     }
 
