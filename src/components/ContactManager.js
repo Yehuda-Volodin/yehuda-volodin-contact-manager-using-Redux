@@ -12,17 +12,16 @@ import defaultBg from './defaultBg.jpg';
 import selectBg from './selectBg.png';
 
 export default function ContactManager(props) {
-    const [contacts, setContacts] = useState(["First Contact"]);
     const [backgroundFile, setBackgroundFile] = useState(defaultBg);
 
-    // useEffect(() => {
-    //     axios.get('https://my-json-server.typicode.com/Yehuda-Volodin/fake-server/contacts_list'
-    //     ).then(res => {
-    //         setContacts([...res.data]);
-    //     }).catch((err) => {
-    //         alert(err);
-    //     });
-    // }, []);
+    useEffect(() => {
+        axios.get('https://my-json-server.typicode.com/Yehuda-Volodin/fake-server/contacts_list'
+        ).then(res => {
+            props.dispatchUpdateContacts([...res.data]);
+        }).catch((err) => {
+            alert(err);
+        });
+    }, []);
 
     function selectBackgroundFileInputHandler(e) {
         const newBackgroundFile = e.target.files[0];
