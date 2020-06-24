@@ -1,0 +1,24 @@
+.fontSize{
+  font-size: calc(10px + 2vmin) !important;
+}
+.contactManager {
+  background-color: white;
+  min-height: 100vh;
+  color: #282c34;
+  background-repeat: round;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.horizontalAlignCenter{
+  text-align: center;
+}
+
+.cursorPointer{
+  cursor: pointer;
+}
+
+.maxHeightOverflow{
+  max-height: 40vh;
+  overflow: auto;
+}
