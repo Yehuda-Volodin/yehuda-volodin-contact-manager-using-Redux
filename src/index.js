@@ -8,24 +8,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-const initialState = {
-  contacts: ["First Contact"],
-};
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case 'ADD_CONTACT':
-      return { contacts: [...state.contacts, action.newContact] };
-    case 'DELETE_CONTACT':
-      let newContacts = [...state.contacts];
-      newContacts.splice(action.id, 1);
-      return { contacts: [...newContacts] };
-    case 'UPDATE_CONTACTS':
-      return { contacts: [...action.newContacts] };
-    default:
-      return state;
-  }
-}
-const store = createStore(reducer);
+import {contacts_reducer} from './reducers/contacts_reducer';
+
+const store = createStore(contacts_reducer);
 
 ReactDOM.render(
   <React.StrictMode>

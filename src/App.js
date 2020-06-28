@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 
 import ContactManager from './components/contact_manager/ContactManager';
 
+import {addContact, deleteContact, updateContacts} from './actions/contacts_actions';
+
 function App(props) {
   return (
     <div>
@@ -19,28 +21,10 @@ function App(props) {
 
 function mapStateToProps(store) {
   return {
-
     contacts: store.contacts
   };
 }
-function addContact(newContact) {
-  return {
-    type: 'ADD_CONTACT',
-    newContact: newContact
-  }
-}
-function deleteContact(id) {
-  return {
-    type: 'DELETE_CONTACT',
-    id: id
-  }
-}
-function updateContacts(newContacts) {
-  return {
-    type: 'UPDATE_CONTACTS',
-    newContacts: newContacts
-  }
-}
+
 const mapDispatchToProps = {
   addContact,
   deleteContact,
