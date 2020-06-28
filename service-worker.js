@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/yehuda-volodin-contact-manager-using-Redux/precache-manifest.b648f2802032b854022e34450539cabf.js"
+  "/yehuda-volodin-contact-manager-using-Redux/precache-manifest.eee4acadc1fbf77e48e84306c1cbe7df.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9dcb456405b8078b8c7ab163b5d274d9",
+    "revision": "2bbbd148d0e2efd3d2e177568f0eaf8c",
     "url": "/yehuda-volodin-contact-manager-using-Redux/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yehuda-volodin-contact-manager-using-Redux/static/css/4.df3fbbea.chunk.css"
   },
   {
-    "revision": "22828b627a419c6b6f5a",
+    "revision": "7bee771208153af3bc21",
     "url": "/yehuda-volodin-contact-manager-using-Redux/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yehuda-volodin-contact-manager-using-Redux/static/js/4.5d97d397.chunk.js"
   },
   {
-    "revision": "22828b627a419c6b6f5a",
-    "url": "/yehuda-volodin-contact-manager-using-Redux/static/js/main.741f1abc.chunk.js"
+    "revision": "7bee771208153af3bc21",
+    "url": "/yehuda-volodin-contact-manager-using-Redux/static/js/main.1ea61d88.chunk.js"
   },
   {
     "revision": "0c88af8e0fd430a2d9c6",
