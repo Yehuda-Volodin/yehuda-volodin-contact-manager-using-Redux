@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import { connect } from "react-redux";
 
-import ContactManager from './components/contact_manager/ContactManager';
+// import ContactManager from './components/contact_manager/ContactManager';
+import { addContact, deleteContact, updateContacts } from './actions/contacts_actions';
 
-import {addContact, deleteContact, updateContacts} from './actions/contacts_actions';
-
+const ContactManager = React.lazy(() => import('./components/contact_manager/ContactManager'));
 function App(props) {
   return (
     <div>
-      <ContactManager
-        contacts={props.contacts}
-        dispatchAddContact={props.addContact}
-        dispatchDeleteContact={props.deleteContact}
-        dispatchUpdateContacts={props.updateContacts}        
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ContactManager
+          contacts={props.contacts}
+          dispatchAddContact={props.addContact}
+          dispatchDeleteContact={props.deleteContact}
+          dispatchUpdateContacts={props.updateContacts}
+        />
+      </Suspense>
     </div>
   );
 }
