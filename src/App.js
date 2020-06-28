@@ -2,10 +2,10 @@ import React, { Suspense } from 'react';
 
 import { connect } from "react-redux";
 
-// import ContactManager from './components/contact_manager/ContactManager';
 import { addContact, deleteContact, updateContacts } from './actions/contacts_actions';
 
 const ContactManager = React.lazy(() => import('./components/contact_manager/ContactManager'));
+
 function App(props) {
   return (
     <div>
