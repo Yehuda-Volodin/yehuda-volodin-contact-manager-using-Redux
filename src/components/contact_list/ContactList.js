@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types';
 import { Row, Col, ListGroup, ListGroupItem, Input, Badge } from 'reactstrap';
-import './ContactManager.css';
+import './contact_list.css';
 
 export default function ContactList(props) {
     ContactList.propTypes = {

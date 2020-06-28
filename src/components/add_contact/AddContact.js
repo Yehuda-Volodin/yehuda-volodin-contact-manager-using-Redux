@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import { Row, Col, Button, Form, Label, Input } from 'reactstrap';
-import './ContactManager.css';
+import './add_contact.css';
 
 export default function AddContact(props) {
     AddContact.propTypes = {

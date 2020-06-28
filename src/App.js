@@ -2,7 +2,7 @@ import React from 'react';
 
 import { connect } from "react-redux";
 
-import ContactManager from './components/ContactManager';
+import ContactManager from './components/contact_manager/ContactManager';
 
 function App(props) {
   return (

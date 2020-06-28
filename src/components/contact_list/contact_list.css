@@ -1,0 +1,12 @@
+.horizontalAlignCenter{
+  text-align: center;
+}
+
+.cursorPointer{
+  cursor: pointer;
+}
+
+.maxHeightOverflow{
+  max-height: 40vh;
+  overflow: auto;
+}

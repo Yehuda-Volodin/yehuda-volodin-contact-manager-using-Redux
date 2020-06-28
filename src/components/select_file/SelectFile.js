@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { Input, Label } from 'reactstrap';
-import './ContactManager.css';
-
 
 export default function SelectFile(props) {
     SelectFile.propTypes = {

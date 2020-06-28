@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Container } from 'reactstrap';
 import axios from "axios";
-import './ContactManager.css';
+import './contact_manager.css';
 
-import SelectFile from './SelectFile';
-import MainHeader from './MainHeader';
-import AddContact from './AddContact';
-import ContactList from './ContactList';
+import SelectFile from '../select_file/SelectFile';
+import MainHeader from '../main_header/MainHeader';
+import AddContact from '../add_contact/AddContact';
+import ContactList from '../contact_list/ContactList';
 
-import defaultBg from './defaultBg.jpg';
-import selectBg from './selectBg.png';
+import defaultBg from './default_bg.jpg';
+import selectBg from './select_bg.png';
 
 export default function ContactManager(props) {
     const [backgroundFile, setBackgroundFile] = useState(defaultBg);
