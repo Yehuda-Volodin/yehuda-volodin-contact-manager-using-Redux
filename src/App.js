@@ -31,5 +31,4 @@ const mapDispatchToProps = {
   updateContacts
 }
 
-// export default App;
 export default connect(mapStateToProps, mapDispatchToProps)(App)
